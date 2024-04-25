@@ -63,6 +63,16 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        <h1>Mapper</h1>
+        <ul>
+          {Object.entries(mapper).map(([key, value]) => (
+            <li key={key}>
+              {key}: {value}
+            </li>
+          ))}
+        </ul>
+        <hr />
+        <h1>Source</h1>
         <ul>
           {Object.entries(source).map(([key, value]) => (
             <li key={key}>
@@ -71,6 +81,7 @@ function App() {
           ))}
         </ul>
         <hr />
+        <h1>Destination</h1>
         <ul>
           {Object.entries(destination).map(([key, value]) => (
             <li key={key}>
@@ -79,6 +90,7 @@ function App() {
           ))}
         </ul>
         <hr />
+        <h1>Mapped Object</h1>
         <ul>
           {Object.entries(mapperObject).map(([key, value]) => (
             <li key={key}>
