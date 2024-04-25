@@ -21,9 +21,9 @@ function mappingObject(
   mapper: Mapper
 ) {
   const obj: Source = {};
-  for (const key in source) {
-    const destinationKey = mapper[key];
-    obj[key] = destination[destinationKey];
+  for (const sourceKey in source) {
+    const destinationKey = mapper[sourceKey];
+    obj[sourceKey] = destination[destinationKey];
   }
   return obj;
 }
